@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong&display=swap');
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+
+
+html{
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    height: 120px;
+    transition: height 0.3s ease-in-out;
+    font-size: 18px;
+}
+  
+.navbar.small {
+    height: 70px;
+    font-size: 15px;
+}
+  
+#navi{
+    padding: 15px;
+    position: sticky;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    z-index: 99;
+    text-align: right;
+}
+
+#navi a{
+    text-decoration: none;
+    padding: 15px;
+    color: aliceblue;
+}
+#navi img{
+    position: absolute;
+    left: 20px;
+    transition: height 0.5s;
+    transition: width 0.5s;
+}
+
+#navi ul{
+    display: flex;
+    justify-content:flex-end;
+}
+#navi ul li{
+    font-family: 'Cairo', sans-serif;
+    list-style-type: none;
+    display: block;
+    color:white;
+    transition: 0.5s;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+#navi ul:hover li{
+    filter: blur(1px);
+}
+#navi ul li:hover{
+    filter: blur(0);
+    cursor: pointer;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, rgb(245, 79, 50) 35%, rgb(237, 255, 101) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+.page1{
+    height: 650px;
+    width: 100%;
+    background-image: url(10.png);
+    background-size: cover;
+}
+#main-heading{
+    color: white;
+    padding-top: 250px;
+    text-align: center;
+    color: white;
+    font-size: 150px;
+    letter-spacing: 1px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    z-index: 1;
+    font-weight: 900;
+}
+#sub-heading{
+    font-family: 'Asap', sans-serif;
+    word-spacing: 10px;
+    letter-spacing: 35px;
+    text-align: center;
+    font-size: 45px;
+    color: rgba(245, 245, 245, 0.798);
+}
+.page2{
+    background-image: url(18.png);
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    color: white;
+    display: flex;
+}
+#left{
+    flex: 4;
+    margin: 10px;
+}
+#left h1{
+    margin-left: 20px;
+    margin-top: 180px;
+    font-size: 45px;
+    font-family: 'Trirong', serif;
+    font-weight: 550;
+}
+#left p{
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+#right{
+    justify-content: right;
+    margin: 20px;
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(5, 6rem);
+    grid-template-columns: repeat(7, 6rem);
+
+}
+#right > img:nth-child(1){
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    z-index: 6;
+}
+#right > img:nth-child(2){
+    grid-column: 3 / 6;
+    grid-row: 3 / 6;
+    z-index: 5;
+}#right > img:nth-child(3){
+    grid-column: 5 / 8;
+    grid-row: 2 / 4;
+}
+#right > img{
+    margin-top: 25px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    border: solid 2px white;
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / .2);
+}
+#right img:hover{
+    box-shadow: 0px 0px 15px;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.slide-in.show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.slidee-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.slidee-in.show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+.page3{
+    border: 1px solid white;
+    color: white;
+    height: 650px;
+    width: 100%;
+    background-color: #9B0C02;
+    background-image: url(1.png);
+    background-size: cover;
+}
+#cont{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    perspective: 1000px;
+    flex: 1;
+    margin: 200px 20px 0px 20px ;
+    height: 400px;
+    width: auto;
+  }
+  
+  .card-inner {
+    border: 1px white solid;
+    border-radius: 10%;
+    box-shadow: 0 0 10px whitesmoke;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: black;
+    border-radius: 10%;
+}
+  
+.card-back {
+    transform: rotateY(180deg);
+}
+  
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+  
+.card h2, .card p {
+    margin: 0;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Urbanist', sans-serif;
+}
+.card h2{
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+}
+
+
+
+.page3 h1{
+    position:absolute;
+    top: 1450px;
+    left: 45%;
+    font-size: 60px;
+    font-family: 'Trirong', serif;
+    font-weight: 550;
+
+}
+
+.page6{
+    background-image: url(21.png);
+    height: 650px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.page5{
+    height: 650px;
+    width: 100%;
+    background-image: url(22.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #AD0C01;
+}
+
+
+.page4{
+    border: 1px solid rgb(255, 255, 255);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    background-image: url(bg.png);
+    background-size: cover;
+}
+
+#logo{
+    margin-top: 75px;
+    margin-left: 135px;
+    background-image: url(loogoo.png);
+    background-size: contain;
+    width: 280px;
+    height: 280px;
+}
+#logoname{
+    position: absolute;
+    top: 3430px;
+    left: 90px;
+    width: 250px;
+    height: 250px;
+    background-image: url(loooooogo.png);
+    background-size: contain;
+}
+
+#contact{
+    flex: 1;
+    color: white;
+    margin-left: 100px;
+    padding: 20px;
+}
+#contact h1{
+    font-size: 2.6rem; 
+    font-family: 'Cairo', sans-serif;
+    font-weight: 550;
+}
+#contact b{
+    font-family: 'Cairo', sans-serif;
+}
+a:hover{
+    color: gold;
+}
+
+
+
+.nav {
+    pointer-events: none;  
+}
+.nav:hover {
+    pointer-events: auto; 
+}
+    
+.sm-header {
+    font-size: 2.6rem; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    pointer-events: auto;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 550;
+
+}    
+.sm-header:hover{
+    color: gold;
+}
+.nav-list {
+    display: flex; 
+    align-items: center; 
+    list-style: none; 
+}
+.nav-item svg{
+    height: 30px;
+    width: 30px;
+}
+    
+.nav-item {
+    opacity: 0;
+    margin-inline: 2.5rem; 
+    transition: opacity 0.5s,
+    transform 0.5s;
+    color: white;
+}
+    
+.nav-item:nth-child(odd) {
+    transform: translateY(5rem); 
+}
+    
+.nav-item:nth-child(even) { 
+    transform: translateY(-5rem); 
+}
+.nav:hover .nav-item {
+    opacity: 1; 
+    transform: translateY(0);
+}
+    
