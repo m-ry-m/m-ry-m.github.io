@@ -1,3 +1,13 @@
+let docTitle = document.title;
+window.addEventListener("blur",()=> {
+    document.title= "Come back!";
+});
+
+window.addEventListener("focus",() => {
+    document.title= docTitle;
+});
+
+
 const navbar = document.querySelector('.navbar');
       
       window.addEventListener('scroll', () => {
@@ -58,3 +68,20 @@ function checkSlideeIn() {
   window.addEventListener('scroll', checkSlideeIn);
   window.addEventListener('load', checkSlideeIn);
  
+
+const clicked = document.getElementById("clicked");
+clicked.addEventListener("click", function(){
+  document.getElementById("text").innerHTML="Your Info is submitted!";
+});
+document.getElementById("nm").addEventListener("click", function(){
+  document.getElementById("text").innerHTML=" ";
+});
+document.getElementById("em").addEventListener("click", function(){
+  document.getElementById("text").innerHTML=" ";
+});
+document.getElementById("sb").addEventListener("click", function(){
+  document.getElementById("text").innerHTML=" ";
+});
+document.getElementById("ms").addEventListener("click", function(){
+  document.getElementById("text").innerHTML=" ";
+})
