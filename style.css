@@ -12,6 +12,8 @@
 html{
     background-color: black;
     scroll-behavior: smooth;
+    font-family:'Cairo', sans-serif ;
+
 }
 
 .navbar {
@@ -653,51 +655,6 @@ span a{
 
 
 
-.carousel {
-    position: relative;
-  }
-  
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-item {
-    position: relative;
-    display: none;
-    float: left;
-  }
-  
-  .carousel-item.active {
-    display: block;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border-radius: 50%;
-  }
-  
-  .carousel-control-prev {
-    left: 0;
-  }
-  
-  .carousel-control-next {
-    right: 0;
-}
-  
-
-
-
 /* Taekwondo Page */
 
 .page10{
@@ -710,17 +667,175 @@ span a{
 .page11{
     height: 650px;
     width: 100%;
-    background-image: url(26.png);
+    background-image: url(image\ 6.png);
     background-size: cover;
+    color: white;
 
 }
-#t{
-    transform: rotate(-90deg);
-    color: white;
-    font-size: 70px;
-    margin-top: 300px;
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.r{
     position: absolute;
     left: 0;
-    border: 1px white solid;
-    margin-left: 0px;
+
 }
+.r svg {
+    font: 90px 'Montserrat';
+    font-weight: 800;
+    width: 700px;
+    margin-top: 50px;
+}
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+.text-copy:nth-child(1){
+	stroke: red;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: red;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: yellow;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: blue;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: green;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+.par{
+    height: 600px;
+    width: 50%;
+    padding-top: 20%;
+    padding-left: 40px;
+}
+
+.page12{
+    background-image: url(image\ 7.png);
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid grey;
+}
+.pa{
+    padding-top: 200px ;
+    width: 50%;
+    margin-left: 45%;
+}
+
+/* Karate Page */
+.page13{
+    height: 650px;
+    width: 100%;
+    background-image: url(image9.png);
+    background-size: cover;
+}
+.page14{
+    background-image: url(image\ 6.png);
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    color: white;
+
+}
+.paar{
+    padding-top: 17%;
+    padding-left: 25px;
+    width: 60%;
+
+}
+
+
+/* Judo Page */
+.page15{
+    height: 650px;
+    width: 100%;
+    background-image: url(image10.png);
+    background-size: cover;
+}
+.page16{
+    height: 700px;
+    width: 100%;
+    color: white;
+    background-image: url(image12.png);
+    background-size: cover;
+}
+
+.paaar{
+    width: 60%;
+    padding-top: 220px;
+    padding-left: 40px;
+}
+
+
+/* Media Page */
+.page17{
+    height: 700px;
+    width: 100%;
+    border: 1px solid white;
+}
+
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .gallery-item {
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .gallery-item img,
+  .gallery-item video {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 20px;
+  }
+  
+  .next-btn {
+    right: 20px;
+  }
+  
