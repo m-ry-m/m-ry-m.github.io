@@ -105,3 +105,7 @@ document.querySelector(".carousel-control-prev").addEventListener("click", funct
 function topFun(){
   document.documentElement.scrollTop = 0;
 }
+
+
+
+
