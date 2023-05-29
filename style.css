@@ -66,6 +66,10 @@ ul li:hover {
     filter: blur(0);
     cursor: pointer;
     letter-spacing: 1px;
+    background: linear-gradient(90deg, yellow 35%, red 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .dropdown{
     position: relative;
@@ -78,6 +82,10 @@ ul li:hover {
 }
 .dropdown:hover .dropdown-content{
     display: block;
+    background: linear-gradient(90deg, yellow 35%, red 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .dropdown-content a{
     display: block;
@@ -85,6 +93,14 @@ ul li:hover {
 }
 .dropdown-content a:hover{
     color: black;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+#selected{
+    background: linear-gradient(90deg, yellow 35%, red 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 
@@ -92,7 +108,7 @@ ul li:hover {
 .page1{
     height: 650px;
     width: 100%;
-    background-image: url(10.png);
+    background-image: url(image\ \(1\).png);
     background-size: cover;
 }
 #main-heading{
@@ -283,7 +299,8 @@ ul li:hover {
 }
 
 .page6{
-    background-image: url(21.png);
+    background-color: #333330;
+    background-image: url(image\ \(4\).png);
     height: 650px;
     width: 100%;
     background-size: contain;
@@ -294,11 +311,11 @@ ul li:hover {
 .page5{
     height: 650px;
     width: 100%;
-    background-image: url(22.png);
+    background-image: url(image\ \(5\).png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #AD0C01;
+    background-color: #A90B00;
 }
 
 
@@ -494,9 +511,10 @@ footer a{
 #page6{
     color: white;
     font-family:  'Cairo', sans-serif ;
-    background-image: url(21.png);
+    background-image: url(image\ \(4\).png);
     height: 650px;
     width: 100%;
+    background-color: #333330;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -530,10 +548,15 @@ footer a{
     width: 200px;
     filter: drop-shadow(0 0px 10px red);
 }
+#loogo:hover{
+    margin-top: 45px;
+    height: 200px;
+    width: 200px;
+    filter: drop-shadow(0 0px 20px rgb(13, 255, 0));
+}
 .c{
     height: 300px;
     width: 400px;
-    border: 1px solid rgb(128, 127, 127);
     border-radius: 10%;
     box-shadow: 0 0 10px red;
     display: flex;
@@ -541,6 +564,13 @@ footer a{
     align-items: center;
     padding: 10px;
     font-size: 23px;
+}
+.c:hover{
+    box-shadow: 0 0 25px red;
+}
+.c, .c input{
+    background: linear-gradient(#111,#111)padding-box, linear-gradient(45deg, #09009f, #00ff95) border-box;
+    border: 4px solid transparent;
 }
 
 .c div{
@@ -558,26 +588,30 @@ span a{
     font-size: 15px;
     padding: 15px;
     position: fixed;
-    bottom: 22%;
+    bottom: 21%;
     left: calc(40%+3px);
 }
-span button{
+#sub button{
+    width: 150px;
     font-size: 15px;
-    padding: 15px;
     position: fixed;
-    bottom: 16%;
+    bottom: 13%;
     left: calc(40%+3px);
 }
 .c input:focus{
     box-shadow: 0 0 10px red;
     background-color: rgb(224, 221, 221);
     color: black;
+    border-radius: 5px;
 }
 .c input{
     padding: 5px;
     font-size: 15px;
 }
-
+#sub button:hover{
+    background-color: black;
+    color: white;
+}
 .page8{
     height: 650px;
     width: 100%;
@@ -617,7 +651,76 @@ span button{
     background-color: rgb(23, 3, 3);
 }
 
+
+
+.carousel {
+    position: relative;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+  }
+  
+  .carousel-item.active {
+    display: block;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev {
+    left: 0;
+  }
+  
+  .carousel-control-next {
+    right: 0;
+}
+  
+
+
+
+/* Taekwondo Page */
+
 .page10{
     height: 650px;
     width: 100%;
+    background-image: url(20.png);
+    background-size: cover;
+}
+
+.page11{
+    height: 650px;
+    width: 100%;
+    background-image: url(26.png);
+    background-size: cover;
+
+}
+#t{
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 70px;
+    margin-top: 300px;
+    position: absolute;
+    left: 0;
+    border: 1px white solid;
+    margin-left: 0px;
 }
