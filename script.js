@@ -85,3 +85,18 @@ document.getElementById("sb").addEventListener("click", function(){
 document.getElementById("ms").addEventListener("click", function(){
   document.getElementById("text").innerHTML=" ";
 })
+
+
+
+
+var carouselItems = document.querySelectorAll(".carousel-item");
+var currentSlide = 0;
+
+function showSlide(n) {
+  carouselItems[currentSlide].classList.remove("active");
+  currentSlide = (n + carouselItems.length) % carouselItems.length;
+  carouselItems[currentSlide].classList.add("active");
+}
+
+document.querySelector(".carousel-control-prev").addEventListener("click", function() {
+  showSlide(currentSlide - 1);});
