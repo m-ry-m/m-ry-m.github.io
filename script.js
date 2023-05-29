@@ -100,3 +100,8 @@ function showSlide(n) {
 
 document.querySelector(".carousel-control-prev").addEventListener("click", function() {
   showSlide(currentSlide - 1);});
+
+
+function topFun(){
+  document.documentElement.scrollTop = 0;
+}
