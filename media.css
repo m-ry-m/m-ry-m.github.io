@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+html{
+    font-family: 'Cairo', sans-serif;
+    color: white;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    height: 120px;
+    transition: height 0.3s ease-in-out;
+    font-size: 18px;
+}
+  
+.navbar.small {
+    height: 70px;
+    font-size: 15px;
+}
+  
+#navi{
+    padding: 15px;
+    position: sticky;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    z-index: 99;
+    text-align: right;
+}
+
+#navi a{
+    text-decoration: none;
+    padding: 15px;
+    color: aliceblue;
+}
+#navi img{
+    flex: 2;
+    position: absolute;
+    left: 20px;
+    transition: height 0.5s;
+    transition: width 0.5s;
+}
+ul{
+    display: flex;
+    justify-content: end;
+}
+ul li{
+    list-style-type: none;
+    display: block;
+    color: white;
+    transition: 0.5s;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+ul:hover li{
+    filter: blur(1px);
+}
+ul li:hover {
+    filter: blur(0);
+    cursor: pointer;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, yellow 35%, red 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 95;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    background: linear-gradient(90deg, yellow 35%, red 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.dropdown-content a{
+    display: block;
+
+}
+.dropdown-content a:hover{
+    color: black;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+#selected{
+    background: linear-gradient(90deg, yellow 35%, red 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.page4{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    background-image: url(bg.png);
+    background-size: cover;
+}
+
+#logo{
+    margin-top: 75px;
+    margin-left: 135px;
+    background-image: url(loogoo.png);
+    background-size: contain;
+    width: 280px;
+    height: 280px;
+}
+#logoname{
+    position: absolute;
+    top: 3430px;
+    left: 90px;
+    width: 250px;
+    height: 250px;
+    background-image: url(loooooogo.png);
+    background-size: contain;
+}
+
+#contact{
+    flex: 1;
+    color: white;
+    margin-left: 100px;
+    padding: 20px;
+}
+#contact h1{
+    font-size: 2.6rem; 
+    font-family: 'Cairo', sans-serif;
+    font-weight: 550;
+}
+#contact b{
+    font-family: 'Cairo', sans-serif;
+}
+a:hover{
+    color: gold;
+}
+
+
+
+.nav {
+    pointer-events: none;  
+    margin-top: 20px;
+}
+.nav:hover {
+    pointer-events: auto; 
+}
+    
+.sm-header {
+    font-size: 2.6rem; 
+    cursor: pointer; 
+    pointer-events: auto;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 550;
+
+}    
+.sm-header:hover{
+    color: gold;
+}
+.nav-list {
+    display: flex; 
+    align-items: center; 
+    list-style: none; 
+}
+.nav-item svg{
+    height: 30px;
+    width: 30px;
+}
+    
+.nav-item {
+    opacity: 0;
+    margin-inline: 2.5rem; 
+    transition: opacity 0.5s,
+    transform 0.5s;
+    color: white;
+}
+    
+.nav-item:nth-child(odd) {
+    transform: translateY(5rem); 
+}
+    
+.nav-item:nth-child(even) { 
+    transform: translateY(-5rem); 
+}
+.nav:hover .nav-item {
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+footer{
+    border-top: rgb(125, 124, 124) solid 1px;
+    width: 100%;
+    height: 20px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+
+}
+footer a{
+    color: antiquewhite;
+}
+/* To the top button */
+#button{
+    width: 50px;
+    height: 50px;
+    border: rgb(0, 0, 0) 5px solid;
+    transition: background-color .3s,
+    opacity 0.5s visibility 0.5s;
+    z-index: 500;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+/* 
+
+#main-gallery{
+    width: 1250px;
+    height: 800px;
+    border: 1px white solid;
+    display: inline-flex;
+    
+}
+#row{
+    flex: 1;
+    display: flex;
+    width: 1250px;
+
+}
+#row div{
+    border: 1px solid white;
+    flex: 1;
+}
+#pic{
+    height: 100px;
+}
+img{
+    height: contain;
+    width: contain;
+} */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
