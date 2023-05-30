@@ -109,44 +109,7 @@ function topFun(){
 
 
 
-const gallery = document.querySelector('.gallery');
-const galleryItems = document.querySelectorAll('.gallery-item');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
 
-let currentIndex = 0;
 
-function showItem() {
-  galleryItems.forEach(item => {
-    item.style.display = 'none';
-  });
-  galleryItems[currentIndex].style.display = 'block';
-}
 
-function prevItem() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = galleryItems.length - 1;
-  }
-  showItem();
-}
 
-function nextItem() {
-  currentIndex++;
-  if (currentIndex >= galleryItems.length) {
-    currentIndex = 0;
-  }
-  showItem();
-}
-
-galleryItems.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    currentIndex = index;
-    showItem();
-  });
-});
-
-prevBtn.addEventListener('click', prevItem);
-nextBtn.addEventListener('click', nextItem);
-
-showItem();
