@@ -17,18 +17,19 @@ html{
 }
 
 .navbar {
-    height: 120px;
+    height: 80px;
     transition: height 0.3s ease-in-out;
     font-size: 18px;
+    padding: 25px;
 }
   
 .navbar.small {
-    height: 70px;
+    height: 50px;
     font-size: 15px;
+    background-color: black;
+    padding: 10px;
 }
-  
 #navi{
-    padding: 15px;
     position: sticky;
     top: 0%;
     right: 0%;
@@ -39,13 +40,19 @@ html{
 
 #navi a{
     text-decoration: none;
-    padding: 15px;
+    margin-top: 20px;
+    padding: 35px;
     color: aliceblue;
+}
+.dropdown-content a{
+    margin: -20px;
+    padding: -20px;
 }
 #navi img{
     flex: 2;
     position: absolute;
     left: 20px;
+    top: 0;
     transition: height 0.5s;
     transition: width 0.5s;
 }
@@ -84,19 +91,26 @@ ul li:hover {
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+.dropdown:hover{
     background: linear-gradient(90deg, yellow 35%, red 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color:currentColor;
+
 }
 .dropdown-content a{
     display: block;
+    background-color: rgb(0, 0, 0);
+    color: black;
 
 }
-.dropdown-content a:hover{
+.dropdown-content:hover a:hover{
     color: black;
     text-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: grey;
 }
+
 #selected{
     background: linear-gradient(90deg, yellow 35%, red 100%);
     background-clip: text;
@@ -793,13 +807,18 @@ span a{
 #button{
     width: 50px;
     height: 50px;
-    border: rgb(0, 0, 0) 5px solid;
+    border: rgb(0, 0, 0) 3px solid;
+    border-radius: 100%;
     transition: background-color .3s,
     opacity 0.5s visibility 0.5s;
     z-index: 500;
     position: fixed;
     bottom: 0;
     right: 0;
+}
+#button:hover svg{
+    width: 20px;
+    height: 20px;
 }
 
 
