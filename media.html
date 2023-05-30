@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,41 @@
             <li><a href="contact.html">CONTACT US</a></li>
         </ul>
     </nav>
+    <div id="main-gallery">
+        <!-- 
+        <div id="row">
+            <div id="pic"><img src="12.jpg" alt=""></div>
+            <div id="pic"><img src="13.jpg" alt=""></div>
+            <div id="pic"><img src="14.jpg" alt=""></div>
+            <div id="pic"><img src="16.jpg" alt=""></div>
+        </div> -->
+        <div style="text-align:center">
+            <h2>Tabbed Image Gallery</h2>
+            <p>Click on the images below:</p>
+          </div>
+          
+          <!-- The four columns -->
+          <div class="row">
+            <div class="column">
+              <img src="12.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="13.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="14.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="16.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+            </div>
+          </div>
+          
+          <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+          </div>
+    </div>
         
     <div class="page4">
         <div id="logo"></div>
@@ -62,7 +97,15 @@
     </div>
     <button id="button" onclick="topFun()">TOP</button>
     <footer> Made by &copy; Maryam Tahir // نادي الشارقة لرياضات الدفاع عن النفس – sports club (no date) العربية. Available at: https://shjsdsc.ae/en/ (Accessed: 27 May 2023). <a href="https://shjsdsc.ae/en/">SHJSDSC</a> </footer>
-
+    <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+        </script>
 <script src="script.js"></script>
 </body>
 </html>
