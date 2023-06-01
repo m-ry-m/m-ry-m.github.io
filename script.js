@@ -1,3 +1,4 @@
+//Changes the title of the webpage when the user leaves the tag
 let docTitle = document.title;
 window.addEventListener("blur",()=> {
     document.title= "Come back!";
@@ -7,7 +8,7 @@ window.addEventListener("focus",() => {
     document.title= docTitle;
 });
 
-
+//Changes the height and width of the navigationbar when sccrolling down
 const navbar = document.querySelector('.navbar');
       
       window.addEventListener('scroll', () => {
@@ -22,7 +23,7 @@ const navbar = document.querySelector('.navbar');
 window.onscroll = function(){
     scrollFunction()
 };
-
+//Changes the height and width of the image when scrolling down
 function scrollFunction(){
     if (document.body.scrollTop>50||document.documentElement.scrollTop>50){
         document.getElementById("myImg").style.height= "50px";
@@ -36,7 +37,7 @@ function scrollFunction(){
        }
 }
 
-
+//adds the animation to the elements when we scroll to their position
 const slideInImages = document.querySelectorAll('.slide-in');
 const slideeInImages = document.querySelectorAll('.slidee-in');
 
@@ -68,7 +69,7 @@ function checkSlideeIn() {
   window.addEventListener('scroll', checkSlideeIn);
   window.addEventListener('load', checkSlideeIn);
  
-
+//When the user submits the info they can see that their info is submitted
 const clicked = document.getElementById("clicked");
 clicked.addEventListener("click", function(){
   document.getElementById("text").innerHTML="Your Info is submitted!";
@@ -86,30 +87,7 @@ document.getElementById("ms").addEventListener("click", function(){
   document.getElementById("text").innerHTML=" ";
 })
 
-
-
-
-var carouselItems = document.querySelectorAll(".carousel-item");
-var currentSlide = 0;
-
-function showSlide(n) {
-  carouselItems[currentSlide].classList.remove("active");
-  currentSlide = (n + carouselItems.length) % carouselItems.length;
-  carouselItems[currentSlide].classList.add("active");
-}
-
-document.querySelector(".carousel-control-prev").addEventListener("click", function() {
-  showSlide(currentSlide - 1);});
-
-
+//Takes the user to the top of the page when clicking the designated button
 function topFun(){
   document.documentElement.scrollTop = 0;
 }
-
-
-
-
-
-
-
-
